@@ -1,0 +1,223 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <div class="container">
+  
+   <div id="jsq" style="text-align:center" class="mt-3 alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+   </div>
+   <div class="d-flex justify-content-center">
+    <button type="button" class="ml-1 btn btn-primary">Primary</button>
+    <button type="button" class="ml-1 btn btn-primary">Primary</button>
+    
+   </div>
+   <p></p>
+   <div style="text-align:center" class="m-10 alert alert-primary" role="alert">上の質問に答えて自分に合ったvを見つけよう</div>
+  </div>
+  
+  <script src="VQ.js"></script>
+
+  <script>const quiz = [
+    {
+        question: '好きな性別は？',
+        ansers:　[
+            '男',
+            '女',
+        ],
+        correct: '男'
+    },{
+        question: '求めるものは？',
+        ansers: [
+            '清楚',
+            '狂気'
+        ],
+        correct: '清楚'
+    },{
+        question: '人？',
+        ansers: [
+            'はい',
+            'いいえ',
+        ],
+        correct: 'はい'
+    },{
+        question: '好きな配信タイプは？',
+        ansers: ['ごりごりにゲーム','まったりゲームや企画'],
+        correct: 'ごりごりにゲーム',
+    }
+];
+
+const quizLengh = quiz.length;
+let  quizIndex = 0;
+let score = 0;
+const kanae = 1111 ;
+const beru=111 ;
+const ekusu=1011 ;
+const guwer=11 ;
+const yasiro=1101;
+const syerin= 101;
+const kuzuha= 1001;
+const batake= 1;
+const peko= 1110;
+const rindoou= 110;
+const okayu= 1010;
+const eri= 10;
+const ruru= 1100;
+const mairn= 100;
+const koro= 1000;
+const akuma= 0;
+
+
+
+
+
+const $button = document.getElementsByTagName('button');
+const buttonLength = $button.length;
+//問題と解答についてのまとめた関数
+const setQuiz = () => {
+    document.getElementById('jsq').textContent = quiz[quizIndex].question;
+    let butttonIndex = 0;
+    while(butttonIndex < buttonLength){
+        $button[butttonIndex].textContent = quiz[quizIndex].ansers[butttonIndex];
+        butttonIndex++;
+    }
+}
+setQuiz();
+
+
+
+//正誤判定にかかわる関数、また、終わり方について
+const clickHandler = (e) => {
+    if(quiz[quizIndex].correct === e.target.textContent){
+       // window.alert('了解！')
+        score =  score +( 1  * (10 ** quizIndex));
+    }else{
+       // window.alert('了解！')
+    }
+
+    quizIndex++;
+
+    if(quizIndex < quizLengh){
+        setQuiz()
+    } else {
+        window.alert('終了！あなたにお勧めのvtuberは・・・・・・')
+     if(score == kanae){
+         window.alert('叶')
+         window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+         window.location.href = 'https://www.youtube.com/channel/UCspv01oxUFf_MTSipURRhkA';
+        }
+     if(score == beru){
+         window.alert('黛灰')
+         window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+         window.location.href = 'https://www.youtube.com/c/MayuzumiX/videos';
+        }
+     if(score == ekusu){
+            window.alert('エクス・アルビオ')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UCIytNcoz4pWzXfLda0DoULQ';
+        }
+     if(score == guwer){
+            window.alert('グウェル・オス・ガール')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UC1QgXt46-GEvtNjEC1paHnw';
+        }
+     if(score == yasiro){
+            window.alert('社築')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UCKMYISTJAQ8xTplUPHiABlA';
+        }
+     if(score == syerin){
+            window.alert('シェリン・バーガンディー')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UCHBhnG2G-qN0JrrWmMO2FTA';
+        }
+     if(score == kuzuha){
+            window.alert('葛葉')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UCSFCh5NL4qXrAy9u-u2lX3g';
+        }
+     if(score == batake){
+            window.alert('花畑チャイカ')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UCsFn_ueskBkMCEyzCEqAOvg';
+        }
+     if(score == peko){
+            window.alert('兎田ぺこら')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ'
+        }
+     if(score == rindoou){
+            window.alert('竜胆尊')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UCPvGypSgfDkVe7JG2KygK7A';
+        }
+     if(score == okayu){
+            window.alert('猫又おかゆ--ホロライブ所属')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UCvaTdHTWBGv3MKj3KVqJVCw';
+        }
+     if(score == eri){
+            window.alert('エリー・コニファー')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UCpNH2Zk2gw3JBjWAKSyZcQQ';
+        }
+     if(score == ruru){
+            window.alert('鈴原るる')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UC_a1ZYZ8ZTXpjg9xUY9sj8w';
+        }
+     if(score == mairn){
+            window.alert('宝鐘マリン')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UCCzUftO8KOVkV4wQG1vkUvg';
+        }
+     if(score == koro){
+            window.alert('戌神ころね')
+            window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+            window.location.href = 'https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q';
+        }
+     if(score == akuma){
+          window.alert('でびでび・でびる')
+          window.alert('okを押すとこの人のYotubeチャンネルに飛ぶよ！')
+          window.location.href = 'https://www.youtube.com/channel/UCjlmCrq4TP1I4xguOtJ-31w';
+        }
+    }
+};
+let handleIndex = 0;
+while (handleIndex < buttonLength) {
+    $button[handleIndex].addEventListener('click', (e) => {
+       clickHandler(e);
+    });
+    handleIndex++;
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
